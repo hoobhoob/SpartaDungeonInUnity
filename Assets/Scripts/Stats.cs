@@ -21,4 +21,12 @@ public class Stats
         hp += stats.hp;
         critical += stats.critical;
     }
+
+    public void Subtract(Stats stats)
+    {
+        atk -= stats.atk;
+        def -= stats.def;
+        hp -= stats.hp;
+        critical -= stats.critical;
+    }
 }

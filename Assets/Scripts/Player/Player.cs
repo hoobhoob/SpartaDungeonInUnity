@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
         _job = "코딩노예";
         _playerInfo = "코딩의 노예가 된지 10년짜리 되는 머슴입니다. 오늘도 밤샐일만 남아서 치킨을 시킬지도 모른다는 생각에 배민을 키고 있네요.";
         _level = 1;
-        _exp = 0;
+        _exp = 1;
         _maxExp = _level + 2;
         _gold = 200000;
         stats.atk = 35;
@@ -66,11 +66,13 @@ public class Player : MonoBehaviour
             }
         }
         _equippedItemsIndex.Add(index);
+        stats.Add(_inventory[index].stats);
     }
 
     public void UnEquipItem(int index)
     {
         _equippedItemsIndex.Remove(index);
+        stats.Subtract(_inventory[index].stats);
     }
 
     #region Get
@@ -121,7 +123,7 @@ public class Player : MonoBehaviour
 
     public float GetExpPercentage()
     {
-        return _exp / _maxExp;
+        return (float)_exp / (float)_maxExp;
     }
     #endregion
 }
