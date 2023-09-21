@@ -25,6 +25,11 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TMP_Text _hp;
     [SerializeField] private TMP_Text _critical;
 
+    [Header("Popup")]
+    [SerializeField] private GameObject _equipPopup;
+    [SerializeField] private TMP_Text _equipUnEquipText;
+    private int _popupIndex;
+
     private void Awake()
     {
         instance = this;
@@ -57,9 +62,18 @@ public class UIManager : MonoBehaviour
 
     public void UpdateStatsUI()
     {
-        _atk.text = _player.stats.Atk.ToString();
-        _def.text = _player.stats.Def.ToString();
-        _hp.text = _player.stats.Hp.ToString();
-        _critical.text = _player.stats.Critical.ToString();
+        _atk.text = _player.stats.atk.ToString();
+        _def.text = _player.stats.def.ToString();
+        _hp.text = _player.stats.hp.ToString();
+        _critical.text = _player.stats.critical.ToString();
+    }
+
+    public void OpenEquipPopup(bool isEquip)
+    {
+        if (isEquip)
+            _equipUnEquipText.text = "장착 하시겠습니까?";
+        else
+            _equipUnEquipText.text = "장착 해제 하시겠습니까?";
+        _equipPopup.SetActive(true);
     }
 }

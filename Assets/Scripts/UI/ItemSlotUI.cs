@@ -6,27 +6,38 @@ using UnityEngine.UI;
 
 public class ItemSlotUI : MonoBehaviour
 {
-    public Button button;
     public Image icon;
-    private ItemData _item;
+    public Image equipIcon;
 
-    public int index;
+    [SerializeField] private ItemData _item;
+    [SerializeField] private int _index;
+    private InventoryUI _inventoryUI;
 
-    public void Set(ItemData item)
+
+    private void Awake()
     {
-        _item = item;
+        _inventoryUI = GetComponentInParent<InventoryUI>();
+    }
+
+    public void Set(ItemData item, int index)
+    {
         icon.gameObject.SetActive(true);
+        _item = item;
         icon.sprite = item.icon;
+        _index = index;
     }
 
     public void Clear()
     {
         _item = null;
+        _index = -1;
         icon.gameObject.SetActive(false);
+        equipIcon.gameObject.SetActive(false);
     }
 
     public void OnButtonClick()
     {
-        Debug.Log($"{_item.name} clicked");
+        if(_index != -1)
+            _inventoryUI.SelectItem(_index);
     }
 }

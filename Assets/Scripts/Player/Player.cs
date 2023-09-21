@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     [SerializeField] private int _maxExp;
     [SerializeField] private int _gold;
     [SerializeField] private List<ItemData> _inventory;
-    [SerializeField] private List<int> _equipItemIndex;
+    [SerializeField] private List<int> _equippedItemsIndex = new List<int>();
     public Stats stats = new Stats();
 
     private void Awake()
@@ -29,11 +29,10 @@ public class Player : MonoBehaviour
         _exp = 0;
         _maxExp = _level + 2;
         _gold = 200000;
-        _inventory = new List<ItemData>();
-        stats.Atk = 35;
-        stats.Def = 40;
-        stats.Hp = 100;
-        stats.Critical = 25;
+        stats.atk = 35;
+        stats.def = 40;
+        stats.hp = 100;
+        stats.critical = 25;
     }
 
     public void ObtainExp(int amount)
@@ -50,10 +49,28 @@ public class Player : MonoBehaviour
     {
         _level += 1;
         _maxExp = _level + 2;
-        stats.Atk += 5;
-        stats.Def += 5;
-        stats.Hp += 10;
-        stats.Critical += 5;
+        stats.atk += 5;
+        stats.def += 5;
+        stats.hp += 10;
+        stats.critical += 5;
+    }
+
+    public void EquipItem(int index)
+    {
+        foreach(int i in _equippedItemsIndex)
+        {
+            if (_inventory[i].type == _inventory[index].type)
+            {
+                UnEquipItem(index);
+                break;
+            }
+        }
+        _equippedItemsIndex.Add(index);
+    }
+
+    public void UnEquipItem(int index)
+    {
+        _equippedItemsIndex.Remove(index);
     }
 
     #region Get
@@ -95,6 +112,11 @@ public class Player : MonoBehaviour
     public List<ItemData> GetInventory()
     {
         return _inventory;
+    }
+
+    public List<int> GetEquippedItemsIndex()
+    {
+        return _equippedItemsIndex;
     }
 
     public float GetExpPercentage()
