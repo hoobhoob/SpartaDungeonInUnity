@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     [SerializeField] private int _exp;
     [SerializeField] private int _maxExp;
     [SerializeField] private int _gold;
+    [SerializeField] private List<ItemData> _inventory;
+    [SerializeField] private List<int> _equipItemIndex;
     public Stats stats = new Stats();
 
     private void Awake()
@@ -27,6 +29,7 @@ public class Player : MonoBehaviour
         _exp = 0;
         _maxExp = _level + 2;
         _gold = 200000;
+        _inventory = new List<ItemData>();
         stats.Atk = 35;
         stats.Def = 40;
         stats.Hp = 100;
@@ -87,6 +90,11 @@ public class Player : MonoBehaviour
     public int GetGold()
     {
         return _gold;
+    }
+
+    public List<ItemData> GetInventory()
+    {
+        return _inventory;
     }
 
     public float GetExpPercentage()

@@ -8,42 +8,25 @@ public class ItemSlotUI : MonoBehaviour
 {
     public Button button;
     public Image icon;
-    private ItemData curItem;
-    private Outline outline;
+    private ItemData _item;
 
     public int index;
-    public bool equipped;
-
-    private void Awake()
-    {
-        outline = GetComponent<Outline>();
-    }
-
-    private void OnEnable()
-    {
-        outline.enabled = equipped;
-    }
 
     public void Set(ItemData item)
     {
-        curItem = item;
+        _item = item;
         icon.gameObject.SetActive(true);
         icon.sprite = item.icon;
-
-        if (outline != null)
-        {
-            outline.enabled = equipped;
-        }
     }
 
     public void Clear()
     {
-        curItem = null;
+        _item = null;
         icon.gameObject.SetActive(false);
     }
 
     public void OnButtonClick()
     {
-        Debug.Log($"{curItem.name} clicked");
+        Debug.Log($"{_item.name} clicked");
     }
 }
