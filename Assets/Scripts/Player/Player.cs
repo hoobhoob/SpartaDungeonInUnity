@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
         _level = 1;
         _exp = 1;
         _maxExp = _level + 2;
-        _gold = 200000;
+        _gold = 2000000;
         stats.atk = 35;
         stats.def = 40;
         stats.hp = 100;

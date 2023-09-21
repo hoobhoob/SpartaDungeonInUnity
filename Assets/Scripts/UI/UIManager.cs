@@ -44,7 +44,7 @@ public class UIManager : MonoBehaviour
         _playerMaxExp.text = _player.GetMaxExp().ToString();
         _uiExpBar.fillAmount = _player.GetExpPercentage();
         _playerInfo.text = _player.GetInfo();
-        _playerGold.text = _player.GetGold().ToString();
+        _playerGold.text = _player.GetGold().ToString("0,000");
     }
 
     public void UpdateLevelUI()
