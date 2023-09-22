@@ -1,1 +1,71 @@
 # SpartaDungeonInUnity
+
+### 목차
+
+1. 게임 설명
+2. 구현 목록
+3. 플레이 화면
+4. 문제점
+
+---
+
+# 1. 게임 설명
+
+- **게임명: `SpartaDungeonInUnity`**
+- **설명:** [내일 배움 캠프 8기 Unity] Unity 게임개발 숙련 개인과제.
+- **개요:**
+    - 이전 C# 으로 만든 콘솔게임 SpartaDungeon 을 유니티로 구현.
+
+---
+
+# 2. 구현 목록
+
+아래의 필수 요구 사항은 모두 구현 완료한 상태이다. (2023.09.22 오전 11시)
+
+🔽 **필수 요구 사항 목록**
+
+- 메인 화면 구성
+- Status 보기
+- Inventory 보기
+
+<details>
+<summary>미완성 목록</summary>
+🔽 **선택 요구사항 목록**
+
+- 아이템 장착 팝업 업그레이드 (난이도 - ★★★☆☆)
+- 상점 기능 (난이도 - ★★★★★)
+</details>
+
+---
+
+# 3. 플레이 화면
+
+## 0️⃣ 캐릭터 선택 및 생성 화면
+
+**🔽 메인 화면**
+
+캐릭터의 이미지와 여러가지 정보들, Status 와 Inventory 버튼을 볼 수 있다.
+
+![MainScene1](/MainScene1.png)
+
+Status 버튼을 누를 시 상태창을 볼 수 있다.
+
+![MainScene2](/MainScene2.png)
+
+Inventory 버튼을 누를 시 인벤토리를 볼 수 있다.
+
+![MainScene3](/MainScene3.png)
+
+아이템을 누를 시 장착 팝업을 볼 수 있다.
+
+![MainScene4](/MainScene4.png)
+
+![MainScene5](/MainScene5.png)
+
+장착된 아이템을 누를 시 장착 해제 팝업을 볼 수 있다.
+
+![MainScene6](/MainScene6.png)
+
+![MainScene7](/MainScene7.png)
+
+---
