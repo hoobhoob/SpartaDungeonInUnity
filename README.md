@@ -63,11 +63,15 @@ Inventory 버튼을 누를 시 인벤토리를 볼 수 있다.
 
 ![MainScene4](/Assets/MainScene4.png)
 
+아이템에 장착 표시가 생긴다.
+
 ![MainScene5](/Assets/MainScene5.png)
 
 장착된 아이템을 누를 시 장착 해제 팝업을 볼 수 있다.
 
 ![MainScene6](/Assets/MainScene6.png)
+
+아이템에 장착 표시가 사라진다.
 
 ![MainScene7](/Assets/MainScene7.png)
 
