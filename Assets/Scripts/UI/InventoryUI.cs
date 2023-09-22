@@ -46,9 +46,9 @@ public class InventoryUI : MonoBehaviour
     {
         _selectedItemIndex = index;
         if (_equippedItemsIndex.Contains(_selectedItemIndex))
-            UIManager.instance.OpenEquipPopup(false);
+            UIManager.instance.OpenEquipPopup(_items[_selectedItemIndex], true);
         else
-            UIManager.instance.OpenEquipPopup(true);
+            UIManager.instance.OpenEquipPopup(_items[_selectedItemIndex], false);
     }
 
     public void ConfirmItem()

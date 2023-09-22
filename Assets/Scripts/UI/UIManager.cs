@@ -25,10 +25,20 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TMP_Text _hp;
     [SerializeField] private TMP_Text _critical;
 
-    [Header("Popup")]
+    [Header("EquipPopup")]
     [SerializeField] private GameObject _equipPopup;
+    [SerializeField] private GameObject _itemAtk;
+    [SerializeField] private TMP_Text _itemAtkValueText;
+    [SerializeField] private GameObject _itemDef;
+    [SerializeField] private TMP_Text _itemDefValueText;
+    [SerializeField] private GameObject _itemHp;
+    [SerializeField] private TMP_Text _itemHpValueText;
+    [SerializeField] private GameObject _itemCritical;
+    [SerializeField] private TMP_Text _itemCriticalValueText;
+    [SerializeField] private TMP_Text _itemNameText;
+    [SerializeField] private TMP_Text _itemInfoText;
     [SerializeField] private TMP_Text _equipUnEquipText;
-    private int _popupIndex;
+    [SerializeField] private Image _itemImage;
 
     private void Awake()
     {
@@ -68,12 +78,27 @@ public class UIManager : MonoBehaviour
         _critical.text = _player.stats.critical.ToString();
     }
 
-    public void OpenEquipPopup(bool isEquip)
+    public void OpenEquipPopup(ItemData item, bool isEquipped)
     {
-        if (isEquip)
-            _equipUnEquipText.text = "장착 하시겠습니까?";
-        else
-            _equipUnEquipText.text = "장착 해제 하시겠습니까?";
         _equipPopup.SetActive(true);
+
+        _itemAtk.SetActive(item.stats.atk != 0);
+        _itemAtkValueText.text = item.stats.atk.ToString();
+        _itemDef.SetActive(item.stats.def != 0);
+        _itemDefValueText.text = item.stats.def.ToString();
+        _itemHp.SetActive(item.stats.hp != 0);
+        _itemHpValueText.text = item.stats.hp.ToString();
+        _itemCritical.SetActive(item.stats.critical != 0);
+        _itemCriticalValueText.text = item.stats.critical.ToString();
+
+        _itemNameText.text = item.displayName;
+        _itemInfoText.text = item.description;
+
+        _itemImage.sprite = item.icon;
+
+        if (isEquipped)
+            _equipUnEquipText.text = "장착 해제 하시겠습니까?";
+        else
+            _equipUnEquipText.text = "장착 하시겠습니까?";
     }
 }
