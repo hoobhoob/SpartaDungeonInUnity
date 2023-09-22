@@ -45,34 +45,34 @@
 
 캐릭터의 이미지와 여러가지 정보들, Status 와 Inventory 버튼을 볼 수 있다.
 
-![MainScene1](/Assets/MainScene1.png)
+![MainScene1](/Screenshot/MainScene1.png)
 
 **🔽 Status**
 
 Status 버튼을 누를 시 상태창을 볼 수 있다.
 
-![MainScene2](/Assets/MainScene2.png)
+![MainScene2](/Screenshot/MainScene2.png)
 
 **🔽 Inventory**
 
 Inventory 버튼을 누를 시 인벤토리를 볼 수 있다.
 
-![MainScene3](/Assets/MainScene3.png)
+![MainScene3](/Screenshot/MainScene3.png)
 
 아이템을 누를 시 장착 팝업을 볼 수 있다.
 
-![MainScene4](/Assets/MainScene4.png)
+![MainScene4](/Screenshot/MainScene4.png)
 
 아이템에 장착 표시가 생긴다.
 
-![MainScene5](/Assets/MainScene5.png)
+![MainScene5](/Screenshot/MainScene5.png)
 
 장착된 아이템을 누를 시 장착 해제 팝업을 볼 수 있다.
 
-![MainScene6](/Assets/MainScene6.png)
+![MainScene6](/Screenshot/MainScene6.png)
 
 아이템에 장착 표시가 사라진다.
 
-![MainScene7](/Assets/MainScene7.png)
+![MainScene7](/Screenshot/MainScene7.png)
 
 ---
