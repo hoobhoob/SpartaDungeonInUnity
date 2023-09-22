@@ -30,6 +30,7 @@
 
 <details>
 <summary>미완성 목록</summary>
+
 🔽 **선택 요구사항 목록**
 
 - 아이템 장착 팝업 업그레이드 (난이도 - ★★★☆☆)
@@ -40,32 +41,34 @@
 
 # 3. 플레이 화면
 
-## 0️⃣ 캐릭터 선택 및 생성 화면
-
 **🔽 메인 화면**
 
 캐릭터의 이미지와 여러가지 정보들, Status 와 Inventory 버튼을 볼 수 있다.
 
-![MainScene1](/MainScene1.png)
+![MainScene1](/Assets/MainScene1.png)
+
+**🔽 Status**
 
 Status 버튼을 누를 시 상태창을 볼 수 있다.
 
-![MainScene2](/MainScene2.png)
+![MainScene2](/Assets/MainScene2.png)
+
+**🔽 Inventory**
 
 Inventory 버튼을 누를 시 인벤토리를 볼 수 있다.
 
-![MainScene3](/MainScene3.png)
+![MainScene3](/Assets/MainScene3.png)
 
 아이템을 누를 시 장착 팝업을 볼 수 있다.
 
-![MainScene4](/MainScene4.png)
+![MainScene4](/Assets/MainScene4.png)
 
-![MainScene5](/MainScene5.png)
+![MainScene5](/Assets/MainScene5.png)
 
 장착된 아이템을 누를 시 장착 해제 팝업을 볼 수 있다.
 
-![MainScene6](/MainScene6.png)
+![MainScene6](/Assets/MainScene6.png)
 
-![MainScene7](/MainScene7.png)
+![MainScene7](/Assets/MainScene7.png)
 
 ---
