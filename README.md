@@ -20,6 +20,8 @@
 
 # 2. 구현 목록
 
+**담당자 : 장성림**
+
 아래의 필수 요구 사항은 모두 구현 완료한 상태이다. (2023.09.22 오전 11시)
 
 🔽 **필수 요구 사항 목록**
@@ -28,12 +30,15 @@
 - Status 보기
 - Inventory 보기
 
+🔽 **선택 요구사항 목록**
+
+- 아이템 장착 팝업 업그레이드 (난이도 - ★★★☆☆) (2023.09.22 오전 12시 5분)
+
 <details>
 <summary>미완성 목록</summary>
 
 🔽 **선택 요구사항 목록**
 
-- 아이템 장착 팝업 업그레이드 (난이도 - ★★★☆☆)
 - 상점 기능 (난이도 - ★★★★★)
 </details>
 
@@ -61,7 +66,7 @@ Inventory 버튼을 누를 시 인벤토리를 볼 수 있다.
 
 아이템을 누를 시 장착 팝업을 볼 수 있다.
 
-![MainScene4](/Screenshot/MainScene4.png)
+![MainScene8](/Screenshot/MainScene8.png)
 
 아이템에 장착 표시가 생긴다.
 
@@ -69,7 +74,7 @@ Inventory 버튼을 누를 시 인벤토리를 볼 수 있다.
 
 장착된 아이템을 누를 시 장착 해제 팝업을 볼 수 있다.
 
-![MainScene6](/Screenshot/MainScene6.png)
+![MainScene9](/Screenshot/MainScene9.png)
 
 아이템에 장착 표시가 사라진다.
 
