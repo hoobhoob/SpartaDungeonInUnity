@@ -61,7 +61,7 @@ public class Player : MonoBehaviour
         {
             if (_inventory[i].type == _inventory[index].type)
             {
-                UnEquipItem(index);
+                UnEquipItem(i);
                 break;
             }
         }
